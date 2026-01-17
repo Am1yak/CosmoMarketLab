@@ -35,4 +35,8 @@ public class ProductRepository {
     public boolean existsProduct(UUID id) {
         return products.containsKey(id);
     }
+
+    public void deleteAll(){
+        products.clear();
+    }
 }

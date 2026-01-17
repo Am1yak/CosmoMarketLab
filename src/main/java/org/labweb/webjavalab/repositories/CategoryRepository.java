@@ -35,4 +35,8 @@ public class CategoryRepository {
     public boolean existsCategory(UUID id) {
         return categories.containsKey(id);
     }
+
+    public void deleteAll() {
+        categories.clear();
+    }
 }
