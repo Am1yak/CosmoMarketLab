@@ -19,6 +19,7 @@ import java.util.UUID;
 public class ProductService {
     private final ProductRepository productRepository;
     private final ProductMapper productMapper;
+    private final CategoryService categoryService;
 
     public List<ProductDTO> getAllProducts() {
         HashMap<UUID, Product> products = productRepository.getProducts();
@@ -57,14 +58,14 @@ public class ProductService {
         productRepository.removeProduct(id);
     }
 
-    public Product addCategoryToProduct(Product product, Category category) {
-        if(!productRepository.existsProduct(product.getId())){
-            throw new ProductNotFoundException("No product found with id " + product.getId());
+    public Product addCategoryToProduct(UUID productId, UUID categoryId) {
+        if(!productRepository.existsProduct(productId)){
+            throw new ProductNotFoundException("No product found with id " + productId);
         }
 
-        Product productWithCategory = Product.builder().id(product.getId())
-                .name(product.getName())
-                .price(product.getPrice()).category(category).build();
-        return productWithCategory;
+        Product product = productRepository.getProduct(productId);
+        Category category = categoryService.getCategoryById(categoryId);
+        product.setCategory(category);
+        return productRepository.save(product);
     }
 }

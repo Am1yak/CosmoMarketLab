@@ -19,7 +19,6 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class ProductController {
     private final ProductService productService;
-    private final CategoryService categoryService;
 
     @GetMapping
     public List<ProductDTO> getProducts() {
@@ -50,10 +49,6 @@ public class ProductController {
 
     @PatchMapping("/{productId}/{categoryId}")
     public ResponseEntity<Product> addCategory(@PathVariable UUID productId, @PathVariable UUID categoryId) {
-        return ResponseEntity.ok(productService.addCategoryToProduct(
-                productService.getProductById(productId),
-                categoryService.getCategoryById(categoryId)
-            )
-        );
+        return ResponseEntity.ok(productService.addCategoryToProduct(productId, categoryId));
     }
 }
