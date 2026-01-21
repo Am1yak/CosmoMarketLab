@@ -1,6 +1,6 @@
 package org.labweb.webjavalab.mappers;
 
-import org.labweb.webjavalab.domain.adapters.usecases.entities.Product;
+import org.labweb.webjavalab.domain.adapters.usecases.entities.product.Product;
 import org.labweb.webjavalab.dtos.ProductDTO;
 import org.mapstruct.Mapper;
 

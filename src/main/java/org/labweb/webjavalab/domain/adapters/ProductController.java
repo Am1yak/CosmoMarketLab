@@ -1,9 +1,8 @@
 package org.labweb.webjavalab.domain.adapters;
 
 import lombok.RequiredArgsConstructor;
-import org.labweb.webjavalab.domain.adapters.usecases.CategoryService;
 import org.labweb.webjavalab.domain.adapters.usecases.ProductService;
-import org.labweb.webjavalab.domain.adapters.usecases.entities.Product;
+import org.labweb.webjavalab.domain.adapters.usecases.entities.product.Product;
 import org.labweb.webjavalab.dtos.ProductDTO;
 import org.springframework.http.ResponseEntity;
 import jakarta.validation.Valid;

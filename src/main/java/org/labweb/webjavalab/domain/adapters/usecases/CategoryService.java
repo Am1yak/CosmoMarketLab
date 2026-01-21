@@ -1,8 +1,7 @@
 package org.labweb.webjavalab.domain.adapters.usecases;
 
 import lombok.RequiredArgsConstructor;
-import org.labweb.webjavalab.domain.adapters.usecases.entities.Category;
-import org.labweb.webjavalab.domain.adapters.usecases.entities.Product;
+import org.labweb.webjavalab.domain.adapters.usecases.entities.product.Category;
 import org.labweb.webjavalab.dtos.CategoryDTO;
 import org.labweb.webjavalab.exceptions.CategoryNotFoundException;
 import org.labweb.webjavalab.mappers.CategoryMapper;

@@ -3,7 +3,7 @@ package org.labweb.webjavalab.service;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.labweb.webjavalab.domain.adapters.usecases.CategoryService;
-import org.labweb.webjavalab.domain.adapters.usecases.entities.Category;
+import org.labweb.webjavalab.domain.adapters.usecases.entities.product.Category;
 import org.labweb.webjavalab.dtos.CategoryDTO;
 import org.labweb.webjavalab.exceptions.CategoryNotFoundException;
 import org.labweb.webjavalab.mappers.CategoryMapper;

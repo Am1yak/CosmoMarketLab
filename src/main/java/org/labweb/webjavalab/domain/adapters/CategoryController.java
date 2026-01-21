@@ -2,7 +2,7 @@ package org.labweb.webjavalab.domain.adapters;
 
 import lombok.RequiredArgsConstructor;
 import org.labweb.webjavalab.domain.adapters.usecases.CategoryService;
-import org.labweb.webjavalab.domain.adapters.usecases.entities.Category;
+import org.labweb.webjavalab.domain.adapters.usecases.entities.product.Category;
 import org.labweb.webjavalab.dtos.CategoryDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
